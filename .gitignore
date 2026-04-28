@@ -21,5 +21,8 @@ frontend/dist/
 .DS_Store
 Thumbs.db
 
+# IDE / tools
+.claude/
+
 # Data (raw downloads can be large — sample data is checked in)
 data/raw/

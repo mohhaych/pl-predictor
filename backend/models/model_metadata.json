@@ -1,10 +1,10 @@
 {
-  "version": "v20260428_194804",
+  "version": "v20260428_203348",
   "algorithm": "Logistic Regression",
-  "trained_at": "2026-04-28T19:48:04.680981",
-  "accuracy": 0.463158,
-  "log_loss": 1.081096,
-  "naive_baseline_accuracy": 0.488158,
+  "trained_at": "2026-04-28T20:33:48.349851",
+  "accuracy": 0.463318,
+  "log_loss": 1.058153,
+  "naive_baseline_accuracy": 0.47918,
   "feature_names": [
     "home_elo",
     "away_elo",
@@ -20,6 +20,13 @@
     "h2h_away_win_rate"
   ],
   "train_seasons": [
+    "2014-15",
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
     "2021-22"
   ],
   "test_seasons": [
@@ -29,16 +36,16 @@
   "random_seed": 42,
   "all_model_results": {
     "Logistic Regression": {
-      "accuracy": 0.463158,
-      "log_loss": 1.081096
+      "accuracy": 0.463318,
+      "log_loss": 1.058153
     },
     "Random Forest": {
-      "accuracy": 0.439474,
-      "log_loss": 1.084339
+      "accuracy": 0.453404,
+      "log_loss": 1.063517
     },
     "XGBoost": {
-      "accuracy": 0.413158,
-      "log_loss": 1.328997
+      "accuracy": 0.428949,
+      "log_loss": 1.10609
     }
   }
 }
