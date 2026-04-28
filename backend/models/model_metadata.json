@@ -1,0 +1,44 @@
+{
+  "version": "v20260428_194804",
+  "algorithm": "Logistic Regression",
+  "trained_at": "2026-04-28T19:48:04.680981",
+  "accuracy": 0.463158,
+  "log_loss": 1.081096,
+  "naive_baseline_accuracy": 0.488158,
+  "feature_names": [
+    "home_elo",
+    "away_elo",
+    "elo_diff",
+    "home_form_pts",
+    "away_form_pts",
+    "home_form_gf",
+    "away_form_gf",
+    "home_form_ga",
+    "away_form_ga",
+    "h2h_home_win_rate",
+    "h2h_draw_rate",
+    "h2h_away_win_rate"
+  ],
+  "train_seasons": [
+    "2021-22"
+  ],
+  "test_seasons": [
+    "2022-23",
+    "2023-24"
+  ],
+  "random_seed": 42,
+  "all_model_results": {
+    "Logistic Regression": {
+      "accuracy": 0.463158,
+      "log_loss": 1.081096
+    },
+    "Random Forest": {
+      "accuracy": 0.439474,
+      "log_loss": 1.084339
+    },
+    "XGBoost": {
+      "accuracy": 0.413158,
+      "log_loss": 1.328997
+    }
+  }
+}

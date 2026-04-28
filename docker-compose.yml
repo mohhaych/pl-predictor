@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: pluser
+      POSTGRES_PASSWORD: plpass
+      POSTGRES_DB: pl_predictor
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "pluser"]
+      interval: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    ports:
+      - "5001:5001"
+    environment:
+      DATABASE_URL: postgresql://pluser:plpass@db:5432/pl_predictor
+    volumes:
+      - ./data:/app/data
+      - ./backend/models:/app/models
+    depends_on:
+      db:
+        condition: service_healthy
+    command: >
+      sh -c "python pipeline/train.py && python app.py"
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  pg_data:

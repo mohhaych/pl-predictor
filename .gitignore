@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# Model artefacts — commit these for a working demo; remove if repo is large
+# backend/models/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (raw downloads can be large — sample data is checked in)
+data/raw/
